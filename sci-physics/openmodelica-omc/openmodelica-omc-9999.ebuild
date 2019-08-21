@@ -1,6 +1,6 @@
 EAPI=7
 
-inherit autotools git-r3
+inherit autotools git-r3 flag-o-matic
 
 DESCRIPTION="The Open Source Modelica Suite - OpenModelica Compiler"
 HOMEPAGE="https://www.openmodelica.org"
@@ -15,7 +15,7 @@ LICENSE="OSMC"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
-DEPEND="app-arch/unzip"
+DEPEND=""
 
 OMCOMPILER_DIR="OMCompiler"
 S="${WORKDIR}/${P}/${OMCOMPILER_DIR}"
