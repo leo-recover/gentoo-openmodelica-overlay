@@ -25,13 +25,13 @@ src_unpack() {
    git-r3_checkout ${EGIT_REPO_URI} "${WORKDIR}/${P}" ${TAG}
 }
 
-pkg_setup() {
-    append-ldflags $(no-as-needed)
+src_prepare() {
+   eautoconf
+   default
 }
 
 src_configure() {
-   eautoconf
-   econf CC=clang CXX=clang++
+   econf CC=clang CXX=clang++ --libdir=/usr/lib
 }
 
 src_compile() {
