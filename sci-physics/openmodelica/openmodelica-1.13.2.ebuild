@@ -13,7 +13,7 @@ fi
 
 LICENSE="OSMC"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE="full_libs"
 DEPEND="app-arch/unzip"
 

@@ -13,7 +13,7 @@ fi
 
 LICENSE="OSMC"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 
 src_unpack() {
    git-r3_fetch ${EGIT_REPO_URI} ${REFS} ${TAG}
