@@ -1,6 +1,6 @@
 EAPI=7
 
-inherit autotools git-r3 flag-o-matic
+inherit autotools git-r3 flag-o-matic desktop
 
 DESCRIPTION="Open-source Modelica-based modeling and simulation environment"
 HOMEPAGE="https://www.openmodelica.org"
@@ -38,4 +38,12 @@ src_configure() {
 
 src_compile() {
     emake omc omplot omedit omnotebook omshell testsuite-depends
+}
+
+src_install() {
+    emake DESTDIR="${D}" install
+    einstalldocs
+    
+    doicon ${WORKDIR}/${P}/OMEdit/OMEdit/OMEditGUI/Resources/icons/omedit.ico
+    make_desktop_entry OMEdit OMEdit omedit
 }
