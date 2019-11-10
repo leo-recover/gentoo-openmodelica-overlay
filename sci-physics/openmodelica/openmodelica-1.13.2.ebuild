@@ -14,8 +14,7 @@ fi
 
 LICENSE="OSMC"
 SLOT="0"
-IUSE="full_libs"
-DEPEND="app-arch/unzip"
+DEPEND="sys-devel/clang"
 
 
 src_unpack() {
