@@ -6,14 +6,14 @@ DESCRIPTION="Open-source Modelica-based modeling and simulation environment"
 HOMEPAGE="https://www.openmodelica.org"
 EGIT_REPO_URI="https://github.com/OpenModelica/OpenModelica.git"
 
-if [[ "${PV}" != "9999" ]] ; then
+if [[ ${PV} != *9999* ]]; then
    REFS="refs/tags/v${PV}"
    TAG="${PV}"
+   KEYWORDS="~amd64"
 fi
 
 LICENSE="OSMC"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE="full_libs"
 DEPEND="app-arch/unzip"
 
