@@ -14,7 +14,8 @@ fi
 
 LICENSE="OSMC"
 SLOT="0"
-DEPEND="sys-devel/clang"
+DEPEND="sys-devel/clang
+    virtual/jre"
 
 
 src_unpack() {
