@@ -33,11 +33,11 @@ pkg_setup() {
 }
 
 src_configure() {
-   econf CC=clang CXX=clang++ --libdir=/usr/lib
+   econf CC=clang CXX=clang++ --with-omlibrary=no --libdir=/usr/lib
 }
 
 src_compile() {
-    emake omc omplot omedit omnotebook omshell testsuite-depends
+    emake
 }
 
 src_install() {
