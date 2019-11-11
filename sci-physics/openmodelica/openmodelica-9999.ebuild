@@ -15,7 +15,15 @@ fi
 LICENSE="OSMC"
 SLOT="0"
 DEPEND="sys-devel/clang
-    virtual/jre"
+    virtual/jre
+    sci-libs/lapack
+    sci-mathematics/lpsolve
+    sci-libs/hdf5
+    dev-libs/expat
+    sys-libs/ncurses
+    sys-libs/readline
+    net-misc/omniORB
+    dev-games/openscenegraph"
 
 
 src_unpack() {
