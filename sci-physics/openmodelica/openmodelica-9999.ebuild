@@ -22,7 +22,6 @@ DEPEND="sys-devel/clang
     dev-libs/expat
     sys-libs/ncurses
     sys-libs/readline
-    net-misc/omniORB
     dev-games/openscenegraph"
 
 
