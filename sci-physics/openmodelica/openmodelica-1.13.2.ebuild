@@ -23,7 +23,10 @@ DEPEND="sys-devel/clang
     sys-libs/ncurses
     sys-libs/readline
     >=net-misc/omniORB-4.2.2
-    dev-games/openscenegraph"
+    dev-games/openscenegraph
+    dev-qt/qtcore
+    dev-qt/qtwebkit
+    dev-qt/qtopengl"
 
 
 src_unpack() {
