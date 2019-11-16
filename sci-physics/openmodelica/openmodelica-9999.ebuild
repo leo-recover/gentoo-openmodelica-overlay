@@ -26,7 +26,8 @@ DEPEND="sys-devel/clang
     dev-games/openscenegraph
     dev-qt/qtcore
     dev-qt/qtwebkit
-    dev-qt/qtopengl"
+    dev-qt/qtopengl
+    dev-qt/linguist-tools"
 
 
 src_unpack() {
