@@ -45,7 +45,7 @@ pkg_setup() {
 }
 
 src_configure() {
-   econf CC=clang CXX=clang++ --with-omlibrary=no --libdir=/usr/lib
+   econf --with-omlibrary=no --libdir=/usr/lib CXXFLAGS=-I/usr/lib/libffi/include/
 }
 
 src_compile() {
