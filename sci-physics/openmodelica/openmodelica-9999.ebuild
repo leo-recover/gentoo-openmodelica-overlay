@@ -17,6 +17,7 @@ SLOT="0"
 DEPEND="sys-devel/clang
     virtual/jre
     sci-libs/lapack
+    sci-libs/sundials
     sci-mathematics/lpsolve
     sci-libs/hdf5
     dev-libs/expat
