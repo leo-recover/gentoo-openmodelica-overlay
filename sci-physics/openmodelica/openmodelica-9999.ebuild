@@ -30,6 +30,10 @@ DEPEND="sys-devel/clang
     dev-qt/qtopengl
     dev-qt/linguist-tools"
 
+PATCHES=(
+	"${FILESDIR}/FCFlags.patch"
+)
+
 
 src_unpack() {
    git-r3_fetch ${EGIT_REPO_URI} ${REFS} ${TAG}
@@ -43,10 +47,11 @@ src_prepare() {
 
 pkg_setup() {
     append-ldflags $(no-as-needed)
+    append-cppflags $(-I/usr/lib/libffi/include/)
 }
 
 src_configure() {
-   econf --with-omlibrary=no --libdir=/usr/lib CPPFLAGS=-I/usr/lib/libffi/include/
+   econf --with-omlibrary=no --libdir=/usr/lib
 }
 
 src_compile() {
