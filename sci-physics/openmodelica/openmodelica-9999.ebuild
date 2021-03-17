@@ -47,7 +47,7 @@ src_prepare() {
 
 pkg_setup() {
     append-ldflags $(no-as-needed)
-    append-cppflags $(-I/usr/lib/libffi/include/)
+    append-cppflags -I/usr/lib/libffi/include/
 }
 
 src_configure() {
