@@ -55,7 +55,7 @@ src_configure() {
 }
 
 src_compile() {
-    emake
+    emake omc omplot omedit omnotebook omshell omsens_qt
 }
 
 src_install() {
