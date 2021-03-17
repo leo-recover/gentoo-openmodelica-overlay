@@ -62,6 +62,6 @@ src_install() {
     emake DESTDIR="${D}" install
     einstalldocs
     
-    doicon ${WORKDIR}/${P}/OMEdit/OMEdit/OMEditGUI/Resources/icons/omedit.ico
+    doicon ${WORKDIR}/${P}/OMEdit/OMEditLIB/Resources/icons/omedit.ico
     make_desktop_entry OMEdit OMEdit omedit
 }
