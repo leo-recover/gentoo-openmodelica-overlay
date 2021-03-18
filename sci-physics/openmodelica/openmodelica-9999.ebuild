@@ -51,7 +51,7 @@ pkg_setup() {
 }
 
 src_configure() {
-   econf --with-omlibrary=no -with-omc=no --libdir=/usr/lib
+   econf --with-omlibrary=no --with-omc=no --libdir=/usr/lib
 }
 
 src_compile() {
