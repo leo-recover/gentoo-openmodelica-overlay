@@ -17,6 +17,7 @@ SLOT="0"
 DEPEND="sys-devel/clang
     virtual/jre
     sci-libs/lapack
+    sci-libs/sundials
     sci-mathematics/lpsolve
     sci-libs/hdf5
     dev-libs/expat
@@ -28,6 +29,10 @@ DEPEND="sys-devel/clang
     dev-qt/qtwebkit
     dev-qt/qtopengl
     dev-qt/linguist-tools"
+
+PATCHES=(
+	"${FILESDIR}/FCFlags.patch"
+)
 
 
 src_unpack() {
@@ -42,20 +47,21 @@ src_prepare() {
 
 pkg_setup() {
     append-ldflags $(no-as-needed)
+    append-cppflags -I/usr/lib/libffi/include/
 }
 
 src_configure() {
-   econf CC=clang CXX=clang++ --with-omlibrary=no --libdir=/usr/lib
+   econf --with-omlibrary=no --with-omc=no --libdir=/usr/lib
 }
 
 src_compile() {
-    emake
+    emake omc omplot omedit omnotebook omshell omsens_qt
 }
 
 src_install() {
     emake DESTDIR="${D}" install
     einstalldocs
     
-    doicon ${WORKDIR}/${P}/OMEdit/OMEdit/OMEditGUI/Resources/icons/omedit.ico
+    doicon ${WORKDIR}/${P}/OMEdit/OMEditLIB/Resources/icons/omedit.ico
     make_desktop_entry OMEdit OMEdit omedit
 }
