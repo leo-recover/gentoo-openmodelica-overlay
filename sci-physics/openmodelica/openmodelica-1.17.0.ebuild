@@ -30,8 +30,9 @@ DEPEND="sys-devel/clang
     dev-qt/qtopengl
     dev-qt/linguist-tools"
 
+    
 PATCHES=(
-	"${FILESDIR}/FCFlags.patch"
+    "${FILESDIR}/FCFlags.patch"
 )
 
 
