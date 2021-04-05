@@ -33,6 +33,7 @@ DEPEND="sys-devel/clang
     
 PATCHES=(
     "${FILESDIR}/FCFlags.patch"
+    "${FILESDIR}/antlr4.patch"
 )
 
 
