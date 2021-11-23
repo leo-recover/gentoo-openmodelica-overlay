@@ -49,11 +49,12 @@ src_prepare() {
 
 pkg_setup() {
     append-ldflags $(no-as-needed)
-    append-cppflags -I/usr/lib/libffi/include/
+    append-cppflags -I/usr/lib/libffi/include/ 
+    append-cxxflags -std=c++14
 }
 
 src_configure() {
-   econf --with-omlibrary=no --with-omc=no --libdir=/usr/lib
+   econf --with-omlibrary=no --with-omc=no --with-cppruntime --libdir=/usr/lib
 }
 
 src_compile() {
