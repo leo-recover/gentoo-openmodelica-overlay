@@ -54,7 +54,7 @@ pkg_setup() {
 }
 
 src_configure() {
-   econf --with-omlibrary=no --with-omc=no --with-cppruntime --libdir=/usr/lib
+   econf --with-omlibrary=no --with-omc=no --with-cppruntime --libdir=/usr/lib QMAKE=/usr/bin/qmake5
 }
 
 src_compile() {
